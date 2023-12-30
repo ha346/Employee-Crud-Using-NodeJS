@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+ 
+ 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
+   <script src="/javascripts/Project.js"></script>
+
+   <link href='/stylesheets/DisplayPicture.css' rel='stylesheet'  />
+</head>
+
+<body>
+  <form action="/employee/editpicture" method="post" enctype="multipart/form-data">
+    <input type="hidden" value="<%= eid %>" name="employeeid">
+    <input type="hidden" value="<%= picture %>" name="oldpicture">
+  <div class="maincontainer">
+    <div class="subDiv">
+      <div class="textHeading">
+        <%= ename %>
+      </div><br>
+
+      <div class="imageStyle"><img src="/images/<%= picture %>" width="200"></div><br> 
+      
+       
+
+      <div class="row">
+           
+        <div class="file-field input-field col s12" style="margin: 0;">
+            <div class="btn">
+                <span>Edit Picture</span>
+                <input type="file" id="pic" name="pic">    
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+         
+    </div>
+</div><br>
+
+      <div class="row">
+         
+            <div class="input-field col s12" style="display: flex; justify-content: center; margin:1;">
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="action" value="Submit">Edit Picture
+                    <i class="material-icons right">edit</i>
+                  </button>
+           
+        </div>
+          
+        
+             
+    </div>
+
+     
+
+    </div>
+  </div>
+</form>
+</body>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</html>

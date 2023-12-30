@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+  
+  $(document).ready(function(){
+      $('.tooltipped').tooltip();
+    });
+ 
+    </script>
+   
+
+
+    <link rel='stylesheet' href='/stylesheets/DisplayEmployee.css' />
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div class="subDiv">
+            <div class="textHeading">
+                <div style="display:flex;justify-content:space-between;">
+                    Employee List
+                    <a class="btn tooltipped" data-position="top" data-tooltip="Interface" href="/employee/employee"><i
+                            class="material-icons prefix">person_add</i></a>
+                </div>
+            </div>
+            <table class="striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name/<br>Gender</th>
+                        <th>Birth Date</th>
+                        <th>Contact<br>Details</th>
+                        <th>Address</th>
+                        <th>Picture</th>
+                        <th>Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% data.map((item)=>{ %>
+                        <tr>
+                            <td>
+                                <%= item.employeeid %>
+                            </td>
+                            <td>
+                                <%= item.employeename %><br>
+                                    <% item.gender %>
+                            </td>
+                            <td>
+                                <%= item.birthdate %>
+                            </td>
+                            <td>
+                                <%= item.emailaddress %><br>
+                                    <%= item.mobilenumber %>
+                            </td>
+                            <td>
+                                <%= item.address %><br>
+                                    <%= item.statename %>,<%= item.cityname %>
+                            </td>
+                            <td><a
+                                    href="/employee/displaypicture?eid=<%= item.employeeid %>&ename=<%= item.employeename %>&picture=<%= item.pic %>"><img
+                                        src="/images/<%= item.pic %>" width="30"></a></td>
+                            <td><a href="/employee/displayrecordbyid?eid=<%= item.employeeid %>">Edit/Delete</a></td>
+                        </tr>
+                        <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+ 
+ 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+
+  $(document).ready(function(){
+$('select').formSelect();
+
+$(document).ready(function(){
+    $('.tooltipped').tooltip();
+  });
+});
+  </script>
+   <script src="/javascripts/Project.js"></script>
+
+   <link rel='stylesheet' href='/stylesheets/EmployeeInterface.css' />
+</head>
+
+<body>
+  <form action="/employee/submitemployeerecord" method="post" enctype="multipart/form-data">
+  <div class="maincontainer">
+    <div class="subDiv">
+      <div class="textHeading">
+        <div style="display:flex;justify-content:space-between;">
+        Employee Register
+        <a class="btn tooltipped" data-position="top" data-tooltip="Display Records" href="/employee/displayallemployee"><i class="material-icons prefix">contacts</i></a>
+        </div>
+      </div>
+      <div class="row">
+         
+        <div class="input-field col s4">
+          <i class="material-icons prefix">account_circle</i>
+          <input required id="firstname" type="text" class="validate" name="firstname">
+          <label for="firstname">First Name</label>
+        </div>
+    
+    
+        <div class="input-field col s4"  >
+          <i class="material-icons prefix">account_circle</i>
+          <input required id="lastname" type="text" class="validate" name="lastname">
+          <label for="lastname">Last Name</label>
+        </div>
+   
+  
+        <div class="input-field col s4"  >
+          <i class="material-icons prefix">event</i>
+          <input required type="text" class="datepicker" id="birthdate" name="birthdate">
+        </div>
+ 
+      </div>
+      <div class="row">
+        
+          <div class="input-field col s2" style="display: flex;justify-content: flex-start; ">
+          <p>
+            <label>
+              <input required class="with-gap" value="male" name="gender" type="radio" id="male" />
+              <span>Male</span>
+            </label>
+          </p>
+        </div>
+       
+        <div class="input-field col s2" style="display: flex;justify-content: flex-start; ">
+        <p>
+          <label>
+            <input required class="with-gap" value="female" name="gender" type="radio" id="female" />
+            <span>Female</span>
+          </label>
+        </p>
+     
+    </div>
+    
+     
+      <div class="input-field col s4"  >
+        <i class="material-icons prefix">phone</i>
+        <input required id="mobilenumber" type="number" class="validate" name="mobilenumber">
+        <label for="empno">Mobile Number</label>
+      </div>
+     
+    
+      <div class="input-field col s4"  >
+        <i class="material-icons prefix">email</i>
+        <input required id="emailaddress" type="email" class="validate" name="emailaddress">
+        <label for="emailaddress">Email Address</label>
+      </div>
+   
+      </div>
+      <div class="row">
+       
+        <div class="input-field col s12"  >
+          <i class="material-icons prefix">home</i>
+          <input required id="address" type="text" class="validate" name="address">
+          <label for="empadd">Address</label>
+        </div>
+      
+      </div>
+      <div class="row">
+        
+            <div class="input-field col s6" >
+                <select required id="state" name="state">
+                    <option value="" disabled selected>Choose your state</option>
+                </select>
+                <label>State</label>
+             
+        </div>
+         
+          <div class="input-field col s6" >
+              <select required id="city" name="city">
+                  <option value="" disabled selected>Choose your city</option>
+              </select>
+              <label>City</label>
+          </div>
+     
+        </div>
+
+        <div class="row">
+           
+              <div class="file-field input-field col s12" >
+                  <div class="btn">
+                      <span>Upload Picture</span>
+                      <input required type="file" id="pic" name="pic">    
+                  </div>
+                  <div class="file-path-wrapper">
+                      <input class="file-path validate" type="text">
+                  </div>
+               
+          </div>
+      </div>
+
+      <div class="row">
+         
+            <div class="input-field col s4" style="display: flex; justify-content: center;margin-top: 0px;">
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="action">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+           
+        </div>
+        <div class="input-field col s4" style="display: flex; justify-content: center; margin:0px;">
+          <% if(status==1) { %>
+            <h6>Record submitted successfully</h6>
+            <% } else if(status==0) {%>
+              <h5>Server error, Record not submitted</h5>
+              <% } %>
+        </div> 
+        
+            <div class="input-field col s4" style="display: flex; justify-content: center; margin-top: 0px;">
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="action">Reset
+                    <i class="material-icons right">delete</i>
+                  </button>
+            
+        </div>
+    </div>
+ 
+
+    </div>
+  </div>
+</form>
+</body>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</html>

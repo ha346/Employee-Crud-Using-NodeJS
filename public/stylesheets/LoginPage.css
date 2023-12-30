@@ -1,0 +1,62 @@
+.maincontainer {
+
+    width: 100%;
+    height: 100vh;
+    background: #2ecc71;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subDiv {
+
+    width: 70%;
+    height: 80%;
+    background: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding:10px;
+    margin: 10px;
+    
+  }
+
+  .textHeading {
+
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+   
+  }
+
+  .loginDivStyle{
+
+    background: white;
+    border-radius: 10px;
+    width:20vw;
+    height:8vh;
+    position:relative;
+    padding:8px
+  }
+
+  .loginStyle{
+
+    width:24vw;
+    height:60vh;
+    margin-top:40px;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    border-radius:10px;
+    background: #2ecc71;
+    box-shadow: 0px 0px 23px 1px gray;
+  }
+
+  /* body{
+    height: 95%;
+    background-image: url("/images/back.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  } */

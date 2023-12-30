@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="/javascripts/Project.js"></script>
+
+    <link rel='stylesheet' href='/stylesheets/LoginPage.css' />
+</head>
+
+<body>
+    <form action="/admin/chkadminlogin" method="post">
+        <div class="maincontainer">
+            <div class="subDiv">
+
+                <div class="row">
+                    <div class="input-field col s7">
+                        <div style="display: flex;justify-content: center;align-items: center;">
+                            <img src="/images/admin.webp" width="500">
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="input-field col s5">
+                        <div class="loginStyle">
+                            <div class="textHeading">
+                                Login
+                            </div>
+                            <div class="loginDivStyle">
+                                <i class="material-icons prefix">email</i>
+                                <input required id="emailid" type="text" class="validate" name="emailid">
+                                <label for="emailid">Email Id/Mobile No.</label>
+                            </div>
+                            <div class="loginDivStyle" style="margin-top: 40px;margin-bottom: 50px;">
+                                <i class="material-icons prefix">lock</i>
+                                <input required id="password" type="password" class="validate" name="password">
+                                <label for="password">Password</label>
+                            </div>
+                            
+                                <button class="btn waves-effect waves-light" style="width: 13vw; margin-top: 0px;"  type="submit" name="action" id="action">Login
+                                    <i class="material-icons right">send</i>
+                                  </button>
+
+                            <div style="display:flex;justify-content:center;align-items:center;font-size: 14px;color:red;margin-top: 10px;">
+                                <h6> <%= message %> </h6>
+                            </div>
+ 
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+</html>

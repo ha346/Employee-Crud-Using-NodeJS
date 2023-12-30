@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/dashboard.css" type="text/css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+        <!-- SIDEBAR -->
+        <input type="checkbox" class="menu__checkbox" id="sideview-crawl">
+        <div class="side-view">
+            <nav class="admin-view__menu">
+                <div class="admin-view__header">
+                    <h3 class="company-name">
+                        <span>Sipla</span>
+                    </h3>
+                    <div class="menu-icon">
+                        <label for="sideview-crawl" class="menu-bar">
+                            <svg>
+                                <use xlink:href='./icons.svg#icon-menu'></use>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="user-profile">
+                    <img src="/images/<%= data.picture %>" alt="admin-picture">
+                    <h3 class="admin-name">
+                        <span><%= data.adminname %></span>
+                    </h3>
+                </div>
+                <ul class="side-nav">
+                    <li class="side-nav__active">
+                            <a style="display:flex;justify-content:center" href="/admin/loginpage"><span>Home</span></a>
+                    </li>
+                    <li class="side-nav__products">
+                        <a style="display:flex;justify-content:center" href="/employee/employee"><span>Interface</span></a>
+                    </li>
+                    <li class="side-nav__users">    
+                           <a style="display:flex;justify-content:center" href="/employee/displayallemployee"><span>Display All</span></a> 
+                    </li>
+                    <li class="side-nav__orders">      
+                           <a style="display:flex;justify-content:center" href="/admin/logout"><span >Logout</span></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <footer class="footer">
+                <p>&copy; Sipla Corporation by <%= data.adminname %></p>
+            </footer>
+        </div>
+
+        <!-- MAIN --->
+        <main class="main main-content">
+            <div class="header">
+                <h1>Welcome back, <%= data.adminname %> 😎</h1>
+                <p>Time</p>
+            </div>
+            
+            <div class="overview-cards">
+                <div class="card product-card">
+                    <div class="title">
+                        <h2>State</h2>
+                    </div>
+                    <span class="content product-content">
+                        <svg>
+                            <use xlink:href='./icons.svg#icon-package'></use>
+                        </svg>
+                        <div class="number">
+                            <h4>6</h4>
+                        </div>
+                    </span>
+                </div>
+                <div class="card user-card">
+                    <div class="title">
+                        <h2>City</h2>
+                    </div>
+                    <span class="content user-content">
+                        <svg>
+                            <use xlink:href='./icons.svg#icon-user'></use>
+                        </svg>
+                        <div class="number">
+                            <h4>18</h4>
+                        </div>
+                    </span>
+                </div>
+                <div class="card order-card">
+                    <div class="title">
+                        <h2>Employee</h2>
+                    </div>
+                    <span class="content order-content">
+                        <svg>
+                            <use xlink:href='./icons.svg#icon-briefcase'></use>
+                        </svg>
+                        <div class="number">
+                            <h4>2,00,000</h4>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </main>
+ 
+</body>
+</html>
